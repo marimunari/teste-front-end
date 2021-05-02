@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@400;700&display=swap");
+
+h1,
+h2,
+p {
+  margin: 80px auto;
+  text-align: center;
+}
+
+h1,
+h2 {
+  width: 40%;
+}
+
+h2,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  padding: 15px 0;
+  font-family: "Orelega One", cursive;
+  font-size: 75px;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+p {
+  width: 20%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p:hover {
+  font-weight: 700;
+}
+
+@media (min-width: 760px) and (max-width: 1199px) {
+  h1,
+  h2 {
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2 {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    width: 40%;
+  }
+}

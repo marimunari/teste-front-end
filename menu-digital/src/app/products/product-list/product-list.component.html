@@ -1,0 +1,28 @@
+<h1>Produtos</h1>
+<div class="search">
+    <label>Pesquisar</label>
+    <input type="text" [(ngModel)]="filter">
+</div>
+<div class="product">
+    <div class="pagination">
+        <pagination-controls (pageChange)="currentPage = $event" previousLabel="Anterior" nextLabel="Próximo">
+        </pagination-controls>
+    </div>
+    <div class="container">
+        <div class="product-item"
+            *ngFor="let product of filteredProducts | paginate:{ itemsPerPage: counter, currentPage: currentPage }">
+            <img [attr.src]="product.picture">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <p>{{ product.price | currency:'BRL' }}</p>
+            <div class="product-button">
+                <button class="btnRating">Classificar</button>
+                <button class="btnDelete" (click)="deleteProduct(product.id)">Excluir</button>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <pagination-controls (pageChange)="currentPage = $event" previousLabel="Anterior" nextLabel="Próximo">
+        </pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<h1>Cadastro</h1>
+<form (ngSubmit)="addProducts(f)" #f="ngForm">
+    <div class="field">
+        <label for="title">Título</label>
+        <input type="text" [(ngModel)]="product.title" name="title" id="title" #title="ngModel" required>
+    </div>
+    <div class="field">
+        <label for="description">Descrição</label>
+        <textarea rows="3" [(ngModel)]="product.description" name="description" id="description" #description="ngModel"
+            required></textarea>
+    </div>
+    <div class="field">
+        <label for="price">Preço</label>
+        <input type="text" [(ngModel)]="product.price" name="price" id="price" #price="ngModel" required>
+    </div>
+    <div class="field">
+        <label for="picture">Imagem</label>
+        <input type="text" [(ngModel)]="product.picture" name="picture" id="picture" #picture="ngModel" required>
+    </div>
+    <div class="field">
+        <label for="thumbnail">Thumbnail</label>
+        <input type="text" [(ngModel)]="product.thumbnail" name="thumbnail" id="thumbnail" #thumbnail="ngModel"
+            required>
+    </div>
+    <div class="form-button">
+        <input class="btnSuccess" type="submit" value="Salvar">
+        <button class="btnReset" type="reset" (click)="cleanForm(f)">Limpar</button>
+    </div>
+</form>
